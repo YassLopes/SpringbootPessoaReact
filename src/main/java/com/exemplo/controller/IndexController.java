@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
-    @GetMapping({"/", "/{path:[^\\.]*}"})
+    @GetMapping({"/", "/{path:[^\\.]*}"})  // Redireciona todas as rotas para index.html
     public String index() {
-        return "index.html";
+        return "forward:/index.html";
     }
 }
